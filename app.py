@@ -15,8 +15,16 @@ st.markdown('''<style>
 .block-container{max-width:1250px;padding-top:2rem}
 [data-testid="stMetric"]{background:light-dark(#f2f6fa,#172433);padding:16px;border-radius:10px}
 .eyebrow{font-size:.8rem;letter-spacing:.12em;color:#428b9c;font-weight:700}
+.app-branding{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.app-brand{font-size:.9rem;font-weight:700;letter-spacing:.08em}
 </style>''',unsafe_allow_html=True)
-st.markdown('<div class="eyebrow">ROTATING EQUIPMENT · FIELD PERFORMANCE</div>',unsafe_allow_html=True)
+st.markdown(
+    '<div class="app-branding">'
+    '<span class="eyebrow">ROTATING EQUIPMENT · FIELD PERFORMANCE</span>'
+    '<span class="app-brand">MKU</span>'
+    '</div>',
+    unsafe_allow_html=True,
+)
 st.title('Compressor Efficiency Tool')
 st.caption(f'Version {VERSION} · Real-gas calculations · Standalone application · No API key required')
 
