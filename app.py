@@ -12,11 +12,11 @@ from engineering import (VERSION, MACHINES, DYNAMIC, PRESETS, COMPONENTS, Case,
 
 st.set_page_config(page_title='Compressor Efficiency Tool', page_icon='⚙️', layout='wide')
 st.markdown('''<style>
-.block-container{max-width:1250px;padding-top:2rem}
+.block-container{max-width:1250px}
 [data-testid="stMetric"]{background:light-dark(#f2f6fa,#172433);padding:16px;border-radius:10px}
 .eyebrow{font-size:.8rem;letter-spacing:.12em;color:#428b9c;font-weight:700}
 .app-branding{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
-.app-brand{font-size:.9rem;font-weight:700;letter-spacing:.08em}
+.app-brand{flex-shrink:0;font-size:.9rem;font-weight:700;letter-spacing:.08em}
 </style>''',unsafe_allow_html=True)
 st.markdown(
     '<div class="app-branding">'
