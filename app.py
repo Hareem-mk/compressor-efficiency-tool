@@ -17,6 +17,7 @@ st.markdown('''<style>
 .eyebrow{font-size:.8rem;letter-spacing:.12em;color:#428b9c;font-weight:700}
 .app-branding{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
 .app-brand{flex-shrink:0;font-size:.9rem;font-weight:700;letter-spacing:.08em}
+.compressor-symbol{width:1.15em;height:1em;vertical-align:-.1em;margin-right:.3em;color:#428b9c}
 </style>''',unsafe_allow_html=True)
 st.markdown(
     '<div class="app-branding">'
@@ -25,7 +26,14 @@ st.markdown(
     '</div>',
     unsafe_allow_html=True,
 )
-st.title('Compressor Efficiency Tool')
+st.markdown(
+    '<h1><svg class="compressor-symbol" viewBox="0 0 48 40" '
+    'aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" '
+    'stroke-linecap="round" stroke-linejoin="round">'
+    '<path d="M2 20h8m28 0h8M10 5v30l28-8V13z"/>'
+    '</svg>Compressor Efficiency Tool</h1>',
+    unsafe_allow_html=True,
+)
 st.caption(f'Version {VERSION} · Real-gas calculations · Standalone application · No API key required')
 
 DEFAULTS={
