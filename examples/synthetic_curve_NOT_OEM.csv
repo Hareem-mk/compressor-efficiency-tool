@@ -1,0 +1,5 @@
+suction_flow_m3h,efficiency_pct,head_kJkg,shaft_power_kW
+1400,78,105,1280
+1600,80,104,1390
+1800,81,102,1490
+2000,80,99,1580
