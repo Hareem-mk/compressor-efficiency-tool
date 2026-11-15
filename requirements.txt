@@ -3,3 +3,5 @@ CoolProp==8.0.0
 numpy==2.5.4
 pandas==3.1.0
 scipy==1.17.0
+
+iapws==1.5.5

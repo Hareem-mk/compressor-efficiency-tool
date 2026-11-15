@@ -6,6 +6,8 @@ import io
 import json
 import pandas as pd
 import streamlit as st
+
+from turbine_ui import render_driver
 from engineering import (VERSION, MACHINES, DYNAMIC, PRESETS, COMPONENTS, Case,
     calculate, parse_composition, parse_kij, pressure_pa, temperature_k,
     pv_power, compare_curve, uncertainty_eta)
@@ -140,7 +142,7 @@ if submitted:
 
 if 'last_error' in st.session_state: st.error(st.session_state['last_error'])
 
-tabs=st.tabs(['Results','Calculation steps','OEM comparison','Field checklist','Methods & limits'])
+tabs=st.tabs(['Results','Calculation steps','OEM comparison','Field checklist','Methods & limits','Turbine driver'])
 r=st.session_state.get('result')
 if r and r['case']['machine']!=machine: r=None
 
@@ -300,3 +302,6 @@ with tabs[4]:
       ('CoolProp PR model','https://coolprop.org/coolprop/Cubics.html'),
       ('Schultz method documentation','https://ccp-centrifugal-compressor-performance.readthedocs.io/en/v0.2.1/discussions/polytropic_methods.html')]:
         st.markdown(f'[{title}]({url})')
+
+with tabs[5]:
+    render_driver(r)

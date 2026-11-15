@@ -9,7 +9,7 @@ from scipy.integrate import quad, solve_ivp
 from scipy.optimize import brentq
 import CoolProp.CoolProp as CP
 
-VERSION = '1.0.0'
+VERSION = '2.0.0'
 MACHINES = ['Centrifugal', 'Axial', 'Reciprocating', 'Screw', 'Rotary lobe',
             'Sliding vane', 'Liquid ring']
 DYNAMIC = {'Centrifugal', 'Axial'}
